@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F45424D5-3921-4CD3-BC3B-992030C4A337}</ProjectGuid>
+    <RootNamespace>rectal_impostume</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>RaptorEngine</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>($ProjectDir);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>($ProjectDir);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>($ProjectDir);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>($ProjectDir);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\opengl_libraries\glm;$(ProjectDir)\opengl_libraries\glfw-3.2.1.bin.WIN32\include;$(ProjectDir)\opengl_libraries\glew-2.0.0\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>D:\Documents\computer science\privat projects\raptor_engine\raptor_engine\opengl_libraries\glew-2.0.0\lib\Release\Win32;($ProjectDir)\opengl_libraries\glew-2.0.0\lib\Release\Win32;($ProjectDir)\opengl_libraries\glfw-3.2.1.bin.WIN32\lib-vc2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)\opengl_libraries\eigen;$(ProjectDir);$(ProjectDir)\opengl_libraries\glm;$(ProjectDir)\opengl_libraries\glfw-3.2.1.bin.WIN32\include;$(ProjectDir)\opengl_libraries\glew-2.0.0\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)\opengl_libraries\glew-2.0.0\lib\Release\x64;$(ProjectDir)\opengl_libraries\glfw-3.2.1.bin.WIN64\lib-vc2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\opengl_libraries\glm;$(ProjectDir)\opengl_libraries\glfw-3.2.1.bin.WIN32\include;$(ProjectDir)\opengl_libraries\glew-2.0.0\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>D:\Documents\computer science\privat projects\raptor_engine\raptor_engine\opengl_libraries\glew-2.0.0\lib\Release\Win32;($ProjectDir)\opengl_libraries\glew-2.0.0\lib\Release\Win32;($ProjectDir)\opengl_libraries\glfw-3.2.1.bin.WIN32\lib-vc2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)\opengl_libraries\eigen;$(ProjectDir);$(ProjectDir)\opengl_libraries\glm;$(ProjectDir)\opengl_libraries\glfw-3.2.1.bin.WIN32\include;$(ProjectDir)\opengl_libraries\glew-2.0.0\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)\opengl_libraries\glew-2.0.0\lib\Release\x64;$(ProjectDir)\opengl_libraries\glfw-3.2.1.bin.WIN64\lib-vc2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="aabb.cpp" />
+    <ClCompile Include="bounding_volume_hierarchy.cpp" />
+    <ClCompile Include="Box.cpp" />
+    <ClCompile Include="box_model.cpp" />
+    <ClCompile Include="box_view.cpp" />
+    <ClCompile Include="default_camera.cpp" />
+    <ClCompile Include="camera_manager.cpp" />
+    <ClCompile Include="camera_object.cpp" />
+    <ClCompile Include="game_object_manager.cpp" />
+    <ClCompile Include="matrices_helpers.cpp" />
+    <ClCompile Include="physics_object_manager.cpp" />
+    <ClCompile Include="physics_system.cpp" />
+    <ClCompile Include="graphics_system.cpp" />
+    <ClCompile Include="keyboard.cpp" />
+    <ClCompile Include="mouse.cpp" />
+    <ClCompile Include="enginge.cpp" />
+    <ClCompile Include="input_system.cpp" />
+    <ClCompile Include="plane_view.cpp" />
+    <ClCompile Include="render_object_manager.cpp" />
+    <ClCompile Include="settings.cpp" />
+    <ClCompile Include="shader_manager.cpp" />
+    <ClCompile Include="display_system.cpp" />
+    <ClCompile Include="TestProject\main.cpp" />
+    <ClCompile Include="TestProject\test_game.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aabb.h" />
+    <ClInclude Include="bounding_volume.h" />
+    <ClInclude Include="bounding_volume_hierarchy.h" />
+    <ClInclude Include="Box.h" />
+    <ClInclude Include="box_model.h" />
+    <ClInclude Include="box_view.h" />
+    <ClInclude Include="default_camera.h" />
+    <ClInclude Include="camera_manager.h" />
+    <ClInclude Include="camera_object.h" />
+    <ClInclude Include="event.h" />
+    <ClInclude Include="event_base.h" />
+    <ClInclude Include="factory.h" />
+    <ClInclude Include="game_object.h" />
+    <ClInclude Include="game_object_manager.h" />
+    <ClInclude Include="matrices_helpers.h" />
+    <ClInclude Include="non_copyable.h" />
+    <ClInclude Include="object_manager.h" />
+    <ClInclude Include="physics_object.h" />
+    <ClInclude Include="physics_object_manager.h" />
+    <ClInclude Include="physics_system.h" />
+    <ClInclude Include="observer.h" />
+    <ClInclude Include="graphics_system.h" />
+    <ClInclude Include="keyboard.h" />
+    <ClInclude Include="mouse.h" />
+    <ClInclude Include="engine.h" />
+    <ClInclude Include="input_system.h" />
+    <ClInclude Include="plane_view.h" />
+    <ClInclude Include="render_object.h" />
+    <ClInclude Include="render_object_manager.h" />
+    <ClInclude Include="settings.h" />
+    <ClInclude Include="shader_manager.h" />
+    <ClInclude Include="event_interface.h" />
+    <ClInclude Include="slot.h" />
+    <ClInclude Include="display_system.h" />
+    <ClInclude Include="slot_base.h" />
+    <ClInclude Include="TestProject\test_game.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="default_shader.frag" />
+    <None Include="default_shader.vert" />
+    <None Include="drag_ui.frag" />
+    <None Include="drag_ui.vert" />
+    <None Include="event.inl" />
+    <None Include="event_base.inl" />
+    <None Include="factory.inl" />
+    <None Include="object_manager.inl" />
+    <None Include="observer.inl" />
+    <None Include="physics_object_manager.inl" />
+    <None Include="engine.inl" />
+    <None Include="event_interface.inl" />
+    <None Include="slot.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
