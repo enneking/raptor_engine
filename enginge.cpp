@@ -1,40 +1,47 @@
 #include "engine.h"
+#include "default_editor.h"
 
 
-rpt::Engine * rpt::Engine::instance_;
+Engine * Engine::instance_;
 
-rpt::Engine::Engine()
+Engine::Engine()
 	: display_system_(1920,1080,"GAME", update_cam_event_.GetInterface())
 	, input_system_(display_system_.GetWindow())
-	, game_object_manager_(update_game_objects_event_.GetInterface())
+	, update_object_manager_(update_update_objects_event_.GetInterface())
 	, graphics_system_(draw_event_.GetInterface())
+	, editor_(std::make_unique<DefaultEditor>(input_system_, display_system_))
 {
 	instance_ = this;
 }
 
-rpt::Engine * rpt::Engine::GetInstance()
+Engine * Engine::GetInstance()
 {
 	return instance_;
 }
 
-rpt::GraphicsSystem * const rpt::Engine::GetGraphicsSystem()
+GraphicsSystem * const Engine::GetGraphicsSystem()
 {
 	return &graphics_system_;
 }
 
-rpt::InputSystem * const rpt::Engine::GetInputSystem()
+InputSystem * const Engine::GetInputSystem()
 {
 	return &input_system_;
 }
 
-rpt::GameObjectManager * const rpt::Engine::GetGameObjectManager()
+UpdateObjectManager * const Engine::GetUpdateObjectManager()
 {
-	return &game_object_manager_;
+	return &update_object_manager_;
 }
 
-rpt::DisplaySystem * const rpt::Engine::GetDisplaySystem()
+DisplaySystem * const Engine::GetDisplaySystem()
 {
 	return &display_system_;
+}
+
+Editor * const Engine::GetEditor()
+{
+	return editor_.get();
 }
 
 const double Engine::GetDeltaTime() const
@@ -42,7 +49,7 @@ const double Engine::GetDeltaTime() const
 	return delta_time_;
 }
 
-void rpt::Engine::Exit()
+void Engine::Exit()
 {
 	is_running_ = false;
 }

@@ -4,24 +4,23 @@
 #include <map>
 
 #include "observer.h"
-
+#include "button.h"
 #include "non_copyable.h"
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
-namespace rpt
+
+class Keyboard : public NonCopyable
 {
-	class Keyboard : public NonCopyable
-	{
-	public:
-		Keyboard(GLFWwindow * window);
+public:
+	Keyboard(GLFWwindow * window);
 
-		Observer<bool>::Interface * const GetKeyEventInterface(int glfw_key);
+	ButtonInterface * const GetKey(int glfw_key);
 
-	private:
-		std::map<int, std::shared_ptr<Observer<bool>>> key_observer_map_;
+private:
+	std::map<int, std::unique_ptr<Button>> key_map_;
 
-	private:
-		friend void ::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
-	};
-}
+private:
+	friend void ::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+};
+

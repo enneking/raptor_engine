@@ -12,15 +12,13 @@
 #include <cstdlib>
 #include <string>
 
-using namespace rpt;
+
 
 ShaderManager::ShaderManager()
 {
 }
 
 GLuint ShaderManager::CreateShaderProg(const std::string sfileNameFs, const std::string sfileNameVs) {
-
-
 	//create shader and program
 	auto vs = glCreateShader(GL_VERTEX_SHADER);
 	auto fs = glCreateShader(GL_FRAGMENT_SHADER);

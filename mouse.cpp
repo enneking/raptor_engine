@@ -1,12 +1,13 @@
 #include "mouse.h"
 
-using namespace rpt;
+
 
 Mouse::Mouse(GLFWwindow * window) : window_(window)
 {
 	glfwSetCursor(window, glfwCreateStandardCursor(GLFW_ARROW_CURSOR));
 	glfwSetCursorPosCallback(window, cursor_position_callback);
 	glfwSetMouseButtonCallback(window, mouse_button_callback);
+	glfwSetScrollCallback(window, scroll_callback);
 }
 
 void Mouse::GetCursorPos(double * x, double * y) const
@@ -23,15 +24,25 @@ Observer<Eigen::Vector2f>::Interface * const Mouse::GetCursorPosEventInterface()
 	return cursor_pos_.GetInterface();
 }
 
-Observer<bool>::Interface * const Mouse::GetLeftMouseButtonEventInterface()
+ButtonInterface * const Mouse::GetLeftButton()
 {
-	return left_mouse_button_.GetInterface();
+	return &left_button_;
 }
-Observer<bool>::Interface * const Mouse::GetRightMouseButtonEventInterface()
+ButtonInterface * const Mouse::GetRightButton()
 {
-	return right_mouse_button_.GetInterface();
+	return &right_button_;
 }
-Observer<bool>::Interface * const Mouse::GetMiddleMouseButtonEventInterface()
+ButtonInterface * const Mouse::GetMiddleButton()
 {
-	return middle_mouse_button_.GetInterface();
+	return &middle_button_;
+}
+
+EventInterface<const double &> * const Mouse::GetWheelEventInterface()
+{
+	return wheel_event_.GetInterface();
+}
+
+void Mouse::ScrollCallback(GLFWwindow* window, double xoffset, double yoffset)
+{
+	wheel_event_.Broadcast(yoffset);
 }

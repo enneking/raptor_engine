@@ -5,16 +5,13 @@
 #include "non_copyable.h" 
 #include <memory>
 
-namespace rpt{
+class RenderObjectManager : public Factory<RenderObject>
+{
+public:
+	RenderObjectManager(EventInterface<GLFWwindow*> * draw_event);
 
-	class RenderObjectManager : public Factory<RenderObject>
-	{
-	public:
-		RenderObjectManager(EventInterface<GLFWwindow*> * draw_event);
-
-	protected:
-		void Draw(GLFWwindow * window);
+protected:
+	void Draw(GLFWwindow * window);
 	
-	};
-
 };
+

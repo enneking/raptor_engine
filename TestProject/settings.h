@@ -7,7 +7,7 @@ public:
 	Settings();
 
 protected: 
-	void ToggleFullScreeen(const bool &val, const bool &old_val);
+	void ToggleFullScreeen();
 
 private:
 	bool is_fullscreen_ = false;

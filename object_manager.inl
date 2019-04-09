@@ -1,4 +1,4 @@
-using namespace rpt;
+
 
 template<class Type, class ...EventArg>
 ObjectManager<Type, EventArg...>::ObjectManager(EventInterface<EventArg...> * update_event)

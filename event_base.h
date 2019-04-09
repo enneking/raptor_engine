@@ -2,7 +2,7 @@
 #include "event_interface.h"
 
 
-namespace rpt {
+
 	template<class ... FuncArgs>
 	class EventBase : public NonCopyable
 	{
@@ -17,4 +17,3 @@ namespace rpt {
 	};
 
 #include "event_base.inl"
-}

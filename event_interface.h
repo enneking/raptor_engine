@@ -7,7 +7,7 @@
 #include"Slot.h"
 
 
-namespace rpt {
+
 
 	template<class ... FuncArgs>
 class EventInterface : public NonCopyable {
@@ -27,7 +27,7 @@ private:
 	std::vector<std::unique_ptr<SlotBase<FuncArgs...>>> method_container_;
 	bool is_locked_ = false;
 };
-};
+
 
 
 #include"event_interface.inl"

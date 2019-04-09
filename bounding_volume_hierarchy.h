@@ -1,6 +1,6 @@
 #pragma once
 
-namespace rpt {
+
 	class BoundingVolumeHierarchyBase
 	{
 	public:
@@ -12,4 +12,3 @@ namespace rpt {
 	{
 	public:
 	};
-}

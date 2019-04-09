@@ -4,12 +4,12 @@
 
 TestGame::TestGame()
 {
-	rpt::Engine::GetInstance()->GetInputSystem()->GetKeyboard()->GetKeyEventInterface(GLFW_KEY_ESCAPE)->AddSlot(this, &TestGame::OnEscKeyPressed);
-	rpt::Engine::GetInstance()->GetDisplaySystem()->GetCameraManager()->Create<DefaultCamera>();
+	Engine::GetInstance()->GetInputSystem()->GetKeyboard()->GetKey(GLFW_KEY_ESCAPE)->GetPressedEvent()->AddSlot(this, &TestGame::OnEscKeyPressed);
+	Engine::GetInstance()->GetDisplaySystem()->GetCameraManager()->Create<DefaultCamera>();
 }
 
 
-void TestGame::OnEscKeyPressed(const bool &, const bool &)
+void TestGame::OnEscKeyPressed()
 {
-	rpt::Engine::GetInstance()->Exit();
+	Engine::GetInstance()->Exit();
 }

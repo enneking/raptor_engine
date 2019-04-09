@@ -6,7 +6,7 @@
 
 #include "non_copyable.h"
 
-namespace rpt {
+
 	class DisplaySystem : public NonCopyable
 	{
 	public:
@@ -23,4 +23,3 @@ namespace rpt {
 		GLFWwindow* window_;
 		CameraManager camera_manager_;
 	};
-};

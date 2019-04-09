@@ -2,7 +2,7 @@
 #include "render_object.h"
 
 
-class PlaneView : public rpt::RenderObject
+class PlaneView : public RenderObject
 {
 public:
 	PlaneView();

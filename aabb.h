@@ -1,19 +1,17 @@
 #pragma once
 #include "bounding_volume.h"
-#include "vec3.h"
+#include "Eigen\Core"
 
-namespace rpt {
 
-	class AABB : public BoundingVolume
-	{
-	public:
-		AABB();
+class AABB : public BoundingVolume
+{
+public:
+	AABB();
 
-		bool IntersectionAABB(AABB other, Vec3<float> * result) const;
+	bool IntersectionAABB(AABB other, Eigen::Vector3f * result) const;
 
-	private:
-		Vec3<float> min_;
-		Vec3<float> max_;
-	};
+private:
+	Eigen::Vector3f min_;
+	Eigen::Vector3f max_;
+};
 
-}

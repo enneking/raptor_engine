@@ -1,10 +1,11 @@
 #include "render_object_manager.h"
 
-using namespace rpt;
+
 
 RenderObjectManager::RenderObjectManager(EventInterface<GLFWwindow*> * draw_event)
 {
 	draw_event->AddSlot(this, &RenderObjectManager::Draw);
+	glEnable(GL_DEPTH_TEST);
 }
 
 void RenderObjectManager::Draw(GLFWwindow * window)

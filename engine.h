@@ -8,11 +8,10 @@
 #include "display_system.h"
 #include "input_system.h"
 #include "graphics_system.h"
-#include "game_object_manager.h"
+#include "update_object_manager.h"
+#include "editor.h"
 
-#include "non_copyable.h"
 
-namespace rpt {
 	class Engine : public NonCopyable {
 	public:
 		Engine();
@@ -21,7 +20,8 @@ namespace rpt {
 
 		GraphicsSystem * const GetGraphicsSystem();
 		InputSystem * const GetInputSystem();
-		GameObjectManager * const GetGameObjectManager();
+		UpdateObjectManager * const GetUpdateObjectManager();
+		Editor * const GetEditor();
 		DisplaySystem * const GetDisplaySystem();
 
 		template<class Game>
@@ -39,17 +39,18 @@ namespace rpt {
 	
 	private:
 		Event<float> update_cam_event_;
-		Event<float> update_game_objects_event_;
+		Event<float> update_update_objects_event_;
 		Event<GLFWwindow*> draw_event_;
 
 	private:
 		DisplaySystem display_system_;
 		InputSystem input_system_;
-		GameObjectManager game_object_manager_;
+		UpdateObjectManager update_object_manager_;
 		GraphicsSystem graphics_system_;
+		std::unique_ptr<Editor> editor_;
 		
 
 };
-};
+
 
 #include "engine.inl"

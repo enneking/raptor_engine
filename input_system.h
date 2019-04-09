@@ -18,7 +18,7 @@
 
 
 
-namespace rpt {
+
 	class InputSystem : public NonCopyable
 	{
 	public:
@@ -33,4 +33,3 @@ namespace rpt {
 		Keyboard keyboard_;
 		Mouse mouse_;
 	};
-};

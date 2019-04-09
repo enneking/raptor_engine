@@ -46,7 +46,7 @@ BoxView::BoxView()
 	glBufferData(GL_ARRAY_BUFFER, sizeof(Vertices), &Vertices, GL_STATIC_DRAW);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, static_cast<void*>(0));
 
-	shader_ = rpt::Engine::GetInstance()->GetGraphicsSystem()->GetShaderManager()->CreateShaderProg("default_shader.frag", "default_shader.vert");
+	shader_ = Engine::GetInstance()->GetGraphicsSystem()->GetShaderManager()->CreateShaderProg("default_shader.frag", "default_shader.vert");
 
 }
 
@@ -67,7 +67,7 @@ EventInterface<> * const BoxView::GetRequestDataEvent()
 
 void BoxView::SetDrawData(const Eigen::Matrix4f * const model_matrix)
 {
-	const auto & view_projection_matrix = rpt::Engine::GetInstance()->GetDisplaySystem()->GetCameraManager()->GetViewportCamera()->GetTransformData()->view_projection_matrix;
+	const auto & view_projection_matrix = Engine::GetInstance()->GetDisplaySystem()->GetCameraManager()->GetViewportCamera()->GetTransformData()->view_projection_matrix;
 	Eigen::Matrix4f model_view_projection_matrix = view_projection_matrix * *model_matrix;
-	glUniformMatrix4fv(0, 1, false, /*&rpt::Engine::GetInstance()->GetDisplaySystem()->GetCameraManager()->GetViewportCamera()->result_[0][0]);*/  &model_view_projection_matrix(0, 0));
+	glUniformMatrix4fv(0, 1, false, &model_view_projection_matrix(0, 0));
 }

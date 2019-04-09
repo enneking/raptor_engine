@@ -1,4 +1,4 @@
-using namespace rpt;
+
 
 template<class TListener, class ... FuncArgs>
 Slot<TListener, FuncArgs...>::Slot(TListener* const obj, void(TListener::* const func)(FuncArgs...)) : obj_(obj), func_(func)

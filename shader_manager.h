@@ -20,7 +20,7 @@
 
 #include "non_copyable.h" 
 
-namespace rpt {
+
 	class ShaderManager : public NonCopyable {
 	public:
 
@@ -34,4 +34,3 @@ namespace rpt {
 		void printGLSLLinkLog(GLuint progHandle);
 
 	};
-}

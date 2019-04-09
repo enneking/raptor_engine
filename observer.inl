@@ -1,4 +1,4 @@
-using namespace rpt;
+
 
 template<class Type>
 Observer<Type>::Observer() : val_(Type())
@@ -40,15 +40,27 @@ bool Observer<Type>::operator==(Type value)
 }
 
 template<class Type>
+void Observer<Type>::operator+=(Type value)
+{
+	*this = *this + value;
+}
+
+template<class Type>
+void Observer<Type>::operator-=(Type value)
+{
+	*this = *this - value;
+}
+
+template<class Type>
 void Observer<Type>::operator*=(Type value)
 {
-	this = val_ * value;
+	*this = *this * value;
 }
 
 template<class Type>
 void Observer<Type>::operator/=(Type value)
 {
-	this = val_ / value;
+	*this = *this / value;
 }
 
 template<class Type>

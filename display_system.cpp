@@ -10,7 +10,7 @@ static void error_callback(int error, const char* description)
 	fputs(description, stderr);
 }
 
-rpt::DisplaySystem::DisplaySystem(int width, int height, const char* title,EventInterface<float> * update_cam_event, GLFWmonitor* monitor, GLFWwindow* share) : camera_manager_(update_cam_event)
+DisplaySystem::DisplaySystem(int width, int height, const char* title,EventInterface<float> * update_cam_event, GLFWmonitor* monitor, GLFWwindow* share) : camera_manager_(update_cam_event)
 {	
 	glfwWindowHint(GLFW_SAMPLES, 4);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
@@ -50,12 +50,12 @@ rpt::DisplaySystem::DisplaySystem(int width, int height, const char* title,Event
 }
 
 
-GLFWwindow* rpt::DisplaySystem::GetWindow()
+GLFWwindow* DisplaySystem::GetWindow()
 {
 	return window_;
 }
 
-void rpt::DisplaySystem::ResizeWindow(int width, int height)
+void DisplaySystem::ResizeWindow(int width, int height)
 {
 	glfwSetWindowSize(window_, width, height);
 }

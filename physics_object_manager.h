@@ -4,7 +4,7 @@
 
 #include "physics_object.h"
 
-namespace rpt {
+
 
 	class PhysicsObjectManager
 	{
@@ -29,4 +29,3 @@ namespace rpt {
 	};
 
 #include "physics_object_manager.inl"
-}

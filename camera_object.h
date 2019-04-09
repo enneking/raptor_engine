@@ -1,13 +1,15 @@
 
 #pragma once
-#include "game_object.h"
+#include "update_object.h"
 
 #include "non_copyable.h"
 #include "matrices_helpers.h"
+#include "observer.h"
 
-namespace rpt {
-	class CameraObject : public GameObject
+
+	class CameraObject : public UpdateObject
 	{
+		friend class CameraManager;
 	public:
 		CameraObject();
 
@@ -15,18 +17,21 @@ namespace rpt {
 			Eigen::Matrix4f view_matrix;
 			Eigen::Matrix4f projection_matrix;
 			Eigen::Matrix4f view_projection_matrix;
+			Eigen::Matrix4f inverse_view_matrix;
 		};
 
 		virtual void Update(float delta_time) override;
 
 		TransformMatrices const * const GetTransformData() const;
+
+		const Eigen::Vector3f * const GetPos() const;
+
 	protected:
-		Eigen::Vector3f center_;
-		Eigen::Vector3f eye_;
+		Observer<Eigen::Vector3f> center_;
+		Observer<Eigen::Vector3f> eye_;
 		Eigen::Vector3f up_;
+
 
 	private:
 		TransformMatrices transform_matrices_;
 	};
-};
-

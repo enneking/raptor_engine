@@ -38,9 +38,6 @@
     <Filter Include="RaptorEngine\Physics\BoundingVolume\2d">
       <UniqueIdentifier>{eb930c64-07ec-4f37-aa2d-313b96ed25c0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="RaptorEngine\Core\GameObject">
-      <UniqueIdentifier>{a6b49001-d6c2-422c-816d-0886d87e6ddf}</UniqueIdentifier>
-    </Filter>
     <Filter Include="RaptorEngine\Display">
       <UniqueIdentifier>{a688b7b6-b785-4ef7-ad6f-a5408bd3e2b0}</UniqueIdentifier>
     </Filter>
@@ -53,14 +50,8 @@
     <Filter Include="RaptorEngine\Utils\Patterns">
       <UniqueIdentifier>{45a8361a-6430-4b1b-aeb9-acbdbb096454}</UniqueIdentifier>
     </Filter>
-    <Filter Include="RaptorEngine\Core\Bases">
-      <UniqueIdentifier>{00daf0aa-8c09-40d1-bb70-eea1bdd6cfc1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="RaptorEngine\Utils\Events">
       <UniqueIdentifier>{c50e901f-b074-41ea-9d95-8ffb845fe7f5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="RaptorEngine\Utils\Events\Observer">
-      <UniqueIdentifier>{bad6ad3f-d0c1-495e-877d-88665e2ea693}</UniqueIdentifier>
     </Filter>
     <Filter Include="TestGame">
       <UniqueIdentifier>{595d3933-d3e0-4d9c-9f6f-1f5b9c265140}</UniqueIdentifier>
@@ -86,9 +77,6 @@
     <Filter Include="RaptorEngine\Utils\Basics\shader">
       <UniqueIdentifier>{9a5ee821-0fe9-4da4-9cdc-e0ad1f8836a2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="RaptorEngine\Utils\Basics\NewFilter1">
-      <UniqueIdentifier>{1f1490c9-734b-4dc4-b6eb-61630440da4b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="RaptorEngine\Utils\Basics\camera">
       <UniqueIdentifier>{fbcde00a-8b8c-43e1-96ed-6b84906ff5c1}</UniqueIdentifier>
     </Filter>
@@ -97,6 +85,30 @@
     </Filter>
     <Filter Include="TestGame\Settings">
       <UniqueIdentifier>{aa1ef332-f56d-4123-96bd-05f5c4229bff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RaptorEngine\Editor">
+      <UniqueIdentifier>{76fac752-06aa-4284-814a-50fe9bdc80c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RaptorEngine\Rendering\RenderObjects">
+      <UniqueIdentifier>{009c1e60-b9f8-4454-8199-2458ecbdd7d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RaptorEngine\Core\UpdateObject">
+      <UniqueIdentifier>{741fa552-e4cd-40d8-89aa-27c53c100f83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RaptorEngine\Core\GameObject">
+      <UniqueIdentifier>{50dfcecb-0660-4690-9c53-68f9a1045eef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RaptorEngine\Core\ObjectManagement">
+      <UniqueIdentifier>{00daf0aa-8c09-40d1-bb70-eea1bdd6cfc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RaptorEngine\Input\Helper">
+      <UniqueIdentifier>{e3d83a17-4a8c-4dea-a8a4-418d92e8d2c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RaptorEngine\Utils\Basics\objects\billboard_sphere">
+      <UniqueIdentifier>{d7ac120d-ed48-46bf-ab3e-9724098fc79d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RaptorEngine\Utils\Basics\objects\defaults">
+      <UniqueIdentifier>{9a11719b-7bae-4f86-9caa-6604f3591177}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -126,9 +138,6 @@
     </ClCompile>
     <ClCompile Include="aabb.cpp">
       <Filter>RaptorEngine\Physics\BoundingVolume\3d</Filter>
-    </ClCompile>
-    <ClCompile Include="game_object_manager.cpp">
-      <Filter>RaptorEngine\Core\GameObject</Filter>
     </ClCompile>
     <ClCompile Include="enginge.cpp">
       <Filter>RaptorEngine\Core</Filter>
@@ -163,14 +172,44 @@
     <ClCompile Include="matrices_helpers.cpp">
       <Filter>RaptorEngine\Utils\math</Filter>
     </ClCompile>
-    <ClCompile Include="settings.cpp">
-      <Filter>TestGame\Settings</Filter>
-    </ClCompile>
     <ClCompile Include="box_view.cpp">
       <Filter>RaptorEngine\Utils\Basics\objects\box</Filter>
     </ClCompile>
     <ClCompile Include="box_model.cpp">
       <Filter>RaptorEngine\Utils\Basics\objects\box</Filter>
+    </ClCompile>
+    <ClCompile Include="TestProject\settings.cpp">
+      <Filter>TestGame\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>RaptorEngine\Rendering\RenderObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="default_editor.cpp">
+      <Filter>RaptorEngine\Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="update_object_manager.cpp">
+      <Filter>RaptorEngine\Core\UpdateObject</Filter>
+    </ClCompile>
+    <ClCompile Include="model.cpp">
+      <Filter>RaptorEngine\Core\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="editor_component.cpp">
+      <Filter>RaptorEngine\Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor.cpp">
+      <Filter>RaptorEngine\Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="billboard_sphere_view.cpp">
+      <Filter>RaptorEngine\Utils\Basics\objects\billboard_sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="billboard_sphere.cpp">
+      <Filter>RaptorEngine\Utils\Basics\objects\billboard_sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="billboard_sphere_model.cpp">
+      <Filter>RaptorEngine\Utils\Basics\objects\billboard_sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="default_game_object.cpp">
+      <Filter>RaptorEngine\Utils\Basics\objects\defaults</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -185,9 +224,6 @@
     </ClInclude>
     <ClInclude Include="shader_manager.h">
       <Filter>RaptorEngine\Rendering</Filter>
-    </ClInclude>
-    <ClInclude Include="slot.h">
-      <Filter>RaptorEngine\Utils\Events\Observer</Filter>
     </ClInclude>
     <ClInclude Include="keyboard.h">
       <Filter>RaptorEngine\Input\Devices</Filter>
@@ -213,12 +249,6 @@
     <ClInclude Include="aabb.h">
       <Filter>RaptorEngine\Physics\BoundingVolume\3d</Filter>
     </ClInclude>
-    <ClInclude Include="game_object_manager.h">
-      <Filter>RaptorEngine\Core\GameObject</Filter>
-    </ClInclude>
-    <ClInclude Include="game_object.h">
-      <Filter>RaptorEngine\Core\GameObject</Filter>
-    </ClInclude>
     <ClInclude Include="display_system.h">
       <Filter>RaptorEngine\Display</Filter>
     </ClInclude>
@@ -240,9 +270,6 @@
     <ClInclude Include="event.h">
       <Filter>RaptorEngine\Utils\Events</Filter>
     </ClInclude>
-    <ClInclude Include="observer.h">
-      <Filter>RaptorEngine\Utils\Events\Observer</Filter>
-    </ClInclude>
     <ClInclude Include="event_base.h">
       <Filter>RaptorEngine\Utils\Events</Filter>
     </ClInclude>
@@ -250,7 +277,7 @@
       <Filter>RaptorEngine\Utils\Events</Filter>
     </ClInclude>
     <ClInclude Include="object_manager.h">
-      <Filter>RaptorEngine\Core\Bases</Filter>
+      <Filter>RaptorEngine\Core\ObjectManagement</Filter>
     </ClInclude>
     <ClInclude Include="Box.h">
       <Filter>RaptorEngine\Utils\Basics\objects\box</Filter>
@@ -267,9 +294,6 @@
     <ClInclude Include="matrices_helpers.h">
       <Filter>RaptorEngine\Utils\math</Filter>
     </ClInclude>
-    <ClInclude Include="settings.h">
-      <Filter>TestGame\Settings</Filter>
-    </ClInclude>
     <ClInclude Include="box_view.h">
       <Filter>RaptorEngine\Utils\Basics\objects\box</Filter>
     </ClInclude>
@@ -282,12 +306,57 @@
     <ClInclude Include="non_copyable.h">
       <Filter>RaptorEngine\Utils\Patterns</Filter>
     </ClInclude>
+    <ClInclude Include="TestProject\settings.h">
+      <Filter>TestGame\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>RaptorEngine\Rendering\RenderObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="default_editor.h">
+      <Filter>RaptorEngine\Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="editor.h">
+      <Filter>RaptorEngine\Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="slot.h">
+      <Filter>RaptorEngine\Utils\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="editor_component.h">
+      <Filter>RaptorEngine\Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="update_object.h">
+      <Filter>RaptorEngine\Core\UpdateObject</Filter>
+    </ClInclude>
+    <ClInclude Include="update_object_manager.h">
+      <Filter>RaptorEngine\Core\UpdateObject</Filter>
+    </ClInclude>
+    <ClInclude Include="model.h">
+      <Filter>RaptorEngine\Core\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelArgs.h">
+      <Filter>RaptorEngine\Utils\Basics\objects\box</Filter>
+    </ClInclude>
+    <ClInclude Include="observer.h">
+      <Filter>RaptorEngine\Utils\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="button.h">
+      <Filter>RaptorEngine\Input\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="billboard_sphere.h">
+      <Filter>RaptorEngine\Utils\Basics\objects\billboard_sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="billboard_sphere_view.h">
+      <Filter>RaptorEngine\Utils\Basics\objects\billboard_sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="billboard_sphere_model.h">
+      <Filter>RaptorEngine\Utils\Basics\objects\billboard_sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="default_game_object.h">
+      <Filter>RaptorEngine\Utils\Basics\objects\defaults</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
-    <None Include="slot.inl">
-      <Filter>RaptorEngine\Utils\Events\Observer</Filter>
-    </None>
     <None Include="drag_ui.frag">
       <Filter>RaptorEngine\Shaders\ui</Filter>
     </None>
@@ -303,14 +372,11 @@
     <None Include="factory.inl">
       <Filter>RaptorEngine\Utils\Patterns</Filter>
     </None>
-    <None Include="observer.inl">
-      <Filter>RaptorEngine\Utils\Events\Observer</Filter>
-    </None>
     <None Include="event_base.inl">
       <Filter>RaptorEngine\Utils\Events</Filter>
     </None>
     <None Include="object_manager.inl">
-      <Filter>RaptorEngine\Core\Bases</Filter>
+      <Filter>RaptorEngine\Core\ObjectManagement</Filter>
     </None>
     <None Include="event.inl">
       <Filter>RaptorEngine\Utils\Events</Filter>
@@ -323,6 +389,18 @@
     </None>
     <None Include="event_interface.inl">
       <Filter>RaptorEngine\Utils\Events</Filter>
+    </None>
+    <None Include="slot.inl">
+      <Filter>RaptorEngine\Utils\Events</Filter>
+    </None>
+    <None Include="observer.inl">
+      <Filter>RaptorEngine\Utils\Events</Filter>
+    </None>
+    <None Include="billboard_sphere.frag">
+      <Filter>RaptorEngine\Utils\Basics\shader</Filter>
+    </None>
+    <None Include="billboard_sphere.vert">
+      <Filter>RaptorEngine\Utils\Basics\shader</Filter>
     </None>
   </ItemGroup>
 </Project>

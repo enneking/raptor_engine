@@ -9,77 +9,77 @@
   <Comment CommentText="Game">
     <Position X="28.75" Y="0.5" Height="0.31" Width="0.718" />
   </Comment>
-  <Class Name="rpt::Engine" Collapsed="true">
+  <Class Name="Engine" Collapsed="true">
     <Position X="1" Y="1" Width="9" />
     <TypeIdentifier>
       <HashCode>AAAAAMAAAAAAAAAAgACBAAAABABAAAAAAAAAIAAAAAI=</HashCode>
       <FileName>engine.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="rpt::InputSystem" Collapsed="true">
+  <Class Name="InputSystem" Collapsed="true">
     <Position X="2.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAACAAAAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>input_system.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="rpt::DisplaySystem" Collapsed="true">
+  <Class Name="DisplaySystem" Collapsed="true">
     <Position X="1" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAggAAAAAAAAEAAEAAACAAAA=</HashCode>
       <FileName>display_system.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="rpt::GraphicsSystem" Collapsed="true">
+  <Class Name="GraphicsSystem" Collapsed="true">
     <Position X="6.5" Y="1.75" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAhAAAAAAAAABAAAAAAAIAAAAAAAAAAQAAAAAAI=</HashCode>
       <FileName>graphics_system.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="rpt::RenderObject" Collapsed="true">
+  <Class Name="RenderObject" Collapsed="true">
     <Position X="6.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>render_object.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="rpt::RenderObjectManager" Collapsed="true">
+  <Class Name="RenderObjectManager" Collapsed="true">
     <Position X="6.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAEAAAEACAAAAAAgAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>render_object_manager.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="rpt::ShaderManager" Collapsed="true">
+  <Class Name="ShaderManager" Collapsed="true">
     <Position X="8.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AoAAAAEgAAACAQQAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>shader_manager.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="rpt::Events::Field&lt;Type&gt;" Collapsed="true">
+  <Class Name="Events::Field&lt;Type&gt;" Collapsed="true">
     <Position X="13" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAABIAQEAAAAAAAAAAAAAAAAgAAQCACgBA=</HashCode>
       <FileName>Field.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="rpt::Events::SignalArgs&lt;&gt;" Collapsed="true">
+  <Class Name="Events::SignalArgs&lt;&gt;" Collapsed="true">
     <Position X="15" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAAAAAAAAAACAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
       <FileName>signal_args.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="rpt::Events::SlotBase&lt;Type&gt;" Collapsed="true">
+  <Class Name="Events::SlotBase&lt;Type&gt;" Collapsed="true">
     <Position X="15" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAABAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Slot.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="rpt::Events::Slot&lt;Type, TListener&gt;" Collapsed="true">
+  <Class Name="Events::Slot&lt;Type, TListener&gt;" Collapsed="true">
     <Position X="13" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAgACAAAAAAAAAAAAAAAAYAAAAgA=</HashCode>

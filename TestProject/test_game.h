@@ -8,7 +8,7 @@ public:
 	TestGame();
 
 private:
-	void OnEscKeyPressed(const bool &, const bool &);
+	void OnEscKeyPressed();
 
 private:
 	Box box_;

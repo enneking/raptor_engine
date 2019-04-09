@@ -1,7 +1,7 @@
 #pragma once
 #include "bounding_volume_hierarchy.h"
 
-namespace rpt {
+
 
 	class PhysicsObject
 	{
@@ -19,4 +19,3 @@ namespace rpt {
 		std::unique_ptr<BoundingVolumeHierarchyBase> bvh_;
 	};
 
-}

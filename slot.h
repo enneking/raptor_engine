@@ -1,7 +1,7 @@
 #pragma once
 #include "non_copyable.h" 
 
-namespace rpt {
+
 	template<class ...FuncArgs >
 	class SlotBase : public NonCopyable {
 	public:
@@ -36,7 +36,7 @@ namespace rpt {
 		uint8_t priority_;
 	};
 
-};
+
 
 
 #include"Slot.inl"

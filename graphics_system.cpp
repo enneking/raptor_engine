@@ -1,6 +1,6 @@
 #include "graphics_system.h"
 
-using namespace rpt;
+
 
 GraphicsSystem::GraphicsSystem(EventInterface<GLFWwindow*> * draw_event) : render_object_manager_(draw_event)
 {

@@ -1,15 +1,12 @@
 #pragma once
 #include <Eigen\Core>
 #include "observer.h"
+#include "model.h"
 
-class BoxModel
+class BoxModel : public Model
 {
 public:
-	BoxModel(Eigen::Vector3f pos_);
+	BoxModel(const Eigen::Vector3f & pos_);
 	const Eigen::Matrix4f * const GetModelMatrix() const;
-
-private:
-	Eigen::Matrix4f model_matrix_;
-
 };
 

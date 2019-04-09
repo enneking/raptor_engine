@@ -1,5 +1,5 @@
 template<class Game>
-void rpt::Engine::Run()
+void Engine::Run()
 {
 	std::cout << "=========== Initialie Game ... start =========== \n \n";
 	Game game;
@@ -21,7 +21,7 @@ void rpt::Engine::Run()
 		while (accumulator >= delta_time_)
 		{
 			accumulator -= delta_time_;
-			update_game_objects_event_.Broadcast(static_cast<float>(delta_time_));
+			update_update_objects_event_.Broadcast(static_cast<float>(delta_time_));
 		}
 		update_cam_event_.Broadcast(static_cast<float>(delta_time_));
 		draw_event_.Broadcast(display_system_.GetWindow());

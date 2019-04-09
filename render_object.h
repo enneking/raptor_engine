@@ -4,13 +4,15 @@
 #include <Eigen/Dense>
 #include "non_copyable.h" 
 
-namespace rpt {
-	class RenderObject : public NonCopyable
-	{
-	public:
-		virtual ~RenderObject() = default;
-		virtual void Draw() = 0;
-	};
 
+class RenderObject : public NonCopyable
+{
+	friend class RenderObjectManager;
+public:
+	virtual ~RenderObject() = default;
+
+protected:
+	virtual void Draw() = 0;
 };
+
 

@@ -3,7 +3,7 @@
 #include "shader_manager.h"
 #include "non_copyable.h" 
 
-namespace rpt {
+
 
 	class GraphicsSystem : public NonCopyable
 	{
@@ -17,5 +17,3 @@ namespace rpt {
 		RenderObjectManager render_object_manager_;
 		ShaderManager shader_manager_;
 	};
-
-};

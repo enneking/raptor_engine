@@ -1,7 +1,7 @@
 #pragma once
 #include "event_base.h"
 
-namespace rpt {
+
 template<class Type>
 class Observer : public EventBase<const Type&, const Type&> {
 public:
@@ -15,6 +15,8 @@ public:
 	void operator=(Type value);
 	bool operator==(Type value);
 	void operator*=(Type value);
+	void operator+=(Type value);
+	void operator-=(Type value);
 	void operator/=(Type value);
 	Type operator+(Type value);
 	Type operator-(Type value);
@@ -26,6 +28,6 @@ private:
 	Type val_;
 	bool is_locked_ = false;
 };	
-};
+
 
 #include "Observer.inl"

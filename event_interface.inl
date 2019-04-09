@@ -1,4 +1,4 @@
-using namespace rpt;
+
 
 template<class ... FuncArgs>
 EventInterface<FuncArgs...>::EventInterface(void(EventInterface::** const func)(FuncArgs...))

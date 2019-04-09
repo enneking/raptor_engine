@@ -3,7 +3,7 @@
 #include "matrices_helpers.h"
 #include "engine.h"
 
-class BoxView : public rpt::RenderObject
+class BoxView : public RenderObject
 {
 public:
 	BoxView();

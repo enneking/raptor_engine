@@ -1,12 +1,12 @@
 #include "aabb.h"
 
-using namespace rpt;
+
 
 AABB::AABB()
 {
 }
 
-bool AABB::IntersectionAABB(AABB other, Vec3<float> * result) const
+bool AABB::IntersectionAABB(AABB other, Eigen::Vector3f * result) const
 {
 	return true;
 }

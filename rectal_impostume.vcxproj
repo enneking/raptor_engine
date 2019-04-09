@@ -142,15 +142,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="aabb.cpp" />
+    <ClCompile Include="billboard_sphere.cpp" />
+    <ClCompile Include="billboard_sphere_model.cpp" />
+    <ClCompile Include="billboard_sphere_view.cpp" />
     <ClCompile Include="bounding_volume_hierarchy.cpp" />
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="box_model.cpp" />
     <ClCompile Include="box_view.cpp" />
+    <ClCompile Include="default_editor.cpp" />
     <ClCompile Include="default_camera.cpp" />
     <ClCompile Include="camera_manager.cpp" />
     <ClCompile Include="camera_object.cpp" />
-    <ClCompile Include="game_object_manager.cpp" />
+    <ClCompile Include="default_game_object.cpp" />
+    <ClCompile Include="Editor.cpp" />
+    <ClCompile Include="editor_component.cpp" />
     <ClCompile Include="matrices_helpers.cpp" />
+    <ClCompile Include="model.cpp" />
     <ClCompile Include="physics_object_manager.cpp" />
     <ClCompile Include="physics_system.cpp" />
     <ClCompile Include="graphics_system.cpp" />
@@ -160,34 +167,44 @@
     <ClCompile Include="input_system.cpp" />
     <ClCompile Include="plane_view.cpp" />
     <ClCompile Include="render_object_manager.cpp" />
-    <ClCompile Include="settings.cpp" />
     <ClCompile Include="shader_manager.cpp" />
     <ClCompile Include="display_system.cpp" />
     <ClCompile Include="TestProject\main.cpp" />
+    <ClCompile Include="TestProject\settings.cpp" />
     <ClCompile Include="TestProject\test_game.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="update_object_manager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aabb.h" />
+    <ClInclude Include="billboard_sphere.h" />
+    <ClInclude Include="billboard_sphere_model.h" />
+    <ClInclude Include="billboard_sphere_view.h" />
     <ClInclude Include="bounding_volume.h" />
     <ClInclude Include="bounding_volume_hierarchy.h" />
     <ClInclude Include="Box.h" />
     <ClInclude Include="box_model.h" />
     <ClInclude Include="box_view.h" />
+    <ClInclude Include="button.h" />
+    <ClInclude Include="default_editor.h" />
     <ClInclude Include="default_camera.h" />
     <ClInclude Include="camera_manager.h" />
     <ClInclude Include="camera_object.h" />
+    <ClInclude Include="default_game_object.h" />
+    <ClInclude Include="editor.h" />
+    <ClInclude Include="editor_component.h" />
     <ClInclude Include="event.h" />
     <ClInclude Include="event_base.h" />
     <ClInclude Include="factory.h" />
-    <ClInclude Include="game_object.h" />
-    <ClInclude Include="game_object_manager.h" />
     <ClInclude Include="matrices_helpers.h" />
+    <ClInclude Include="model.h" />
+    <ClInclude Include="ModelArgs.h" />
     <ClInclude Include="non_copyable.h" />
     <ClInclude Include="object_manager.h" />
+    <ClInclude Include="observer.h" />
     <ClInclude Include="physics_object.h" />
     <ClInclude Include="physics_object_manager.h" />
     <ClInclude Include="physics_system.h" />
-    <ClInclude Include="observer.h" />
     <ClInclude Include="graphics_system.h" />
     <ClInclude Include="keyboard.h" />
     <ClInclude Include="mouse.h" />
@@ -196,15 +213,20 @@
     <ClInclude Include="plane_view.h" />
     <ClInclude Include="render_object.h" />
     <ClInclude Include="render_object_manager.h" />
-    <ClInclude Include="settings.h" />
     <ClInclude Include="shader_manager.h" />
     <ClInclude Include="event_interface.h" />
     <ClInclude Include="slot.h" />
     <ClInclude Include="display_system.h" />
     <ClInclude Include="slot_base.h" />
+    <ClInclude Include="TestProject\settings.h" />
     <ClInclude Include="TestProject\test_game.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="update_object.h" />
+    <ClInclude Include="update_object_manager.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="billboard_sphere.frag" />
+    <None Include="billboard_sphere.vert" />
     <None Include="ClassDiagram.cd" />
     <None Include="default_shader.frag" />
     <None Include="default_shader.vert" />
